@@ -29,11 +29,11 @@ print("logging in...")
 robin.login(r_username, r_password)
 print("pulling data")
 
-#get all stock orders
+#Get all stock orders
 all_stock_orders = get_all_stock_orders()
 
 print("exporting...")
-#write to file
+#Write to file
 with open('allstockorders.txt', 'w') as order_file:
     for order in all_stock_orders:
         order_file.write(f"Symbol: {order['symbol']}, Price: {order['price']}, "
